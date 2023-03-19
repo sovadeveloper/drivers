@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/drivers_service_a
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8081
+
+salt:
+  value: $2a$10$2TJAWhbKZAkIgVNh9HUQ7e
+
+client:
+  service_b:
+    url: http://localhost:8080/api
